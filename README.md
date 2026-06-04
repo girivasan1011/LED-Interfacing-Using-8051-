@@ -22,7 +22,39 @@ To interface an LED with the 8051 microcontroller and control its operation.
 5.	Introduce a delay.
 6.	Repeat the process continuously.
 ## Program:
+```
+#include<reg52.h> 
+
+
+sbit LED = P2^0;
+
+void Delay(void);
+
+void main(void)
+{
+    while(1)
+	  { 
+	      LED = 0;
+		    Delay();
+		    LED = 1;
+		    Delay();
+	  }
+}
+void Delay(void)
+{
+    int j;
+	  int i;
+	  for(i=0;i<10;i++)
+	  {
+	      for(j=0;j<10000;j++)
+		{
+		}
+	}
+}
+```
 ## Output:
+<img width="717" height="444" alt="image" src="https://github.com/user-attachments/assets/48a2a44e-1415-4143-9ff3-d881e2824b72" />
+
 ## Result:
 The LED interfacing with the 8051 microcontroller has been successfully implemented and simulated using Keil and Proteus.
 
